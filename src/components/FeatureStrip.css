@@ -1,0 +1,24 @@
+.feature-strip {
+  display: flex;
+  gap: 16px;
+  margin: 26px 48px 0;
+  max-width: 624px;
+}
+
+.feature-strip__item {
+  flex: 1;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--pj-panel-border);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .feature-strip {
+    flex-direction: column;
+    margin: 20px 20px 0;
+  }
+}

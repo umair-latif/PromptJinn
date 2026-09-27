@@ -1,0 +1,85 @@
+.wish-card {
+  position: relative;
+  margin: 34px 48px 0;
+  background: var(--pj-panel);
+  border: 1px solid var(--pj-gold-soft);
+  border-radius: var(--pj-radius-lg);
+  padding: 24px;
+  max-width: 624px;
+}
+
+.wish-card__label {
+  font-size: 10.5px;
+  letter-spacing: 1px;
+  color: var(--pj-ink-faint);
+  text-transform: uppercase;
+}
+
+.wish-card__input {
+  margin-top: 8px;
+  padding: 13px 16px;
+  background: var(--pj-input-bg);
+  border-radius: var(--pj-radius-md);
+  font-size: 14px;
+}
+
+.wish-card__arrow {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.wish-card__output {
+  position: relative;
+  margin-top: 8px;
+  padding: 16px;
+  background: var(--pj-gold-softer);
+  border: 1px solid var(--pj-gold-soft);
+  border-radius: var(--pj-radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12.5px;
+  color: #efe6c8;
+}
+
+.wish-card__copy {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  padding: 5px 11px;
+  background: var(--pj-gold);
+  color: var(--pj-bg-start);
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 7px;
+  border: none;
+  opacity: 0.85;
+}
+
+.wish-card__success {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--pj-gold-soft);
+}
+
+.wish-card__success-title {
+  font-family: var(--pj-font-display);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.wish-card__success-body {
+  font-size: 12.5px;
+  color: var(--pj-ink-muted);
+  margin-top: 2px;
+}
+
+@media (max-width: 640px) {
+  .wish-card {
+    margin: 24px 20px 0;
+  }
+}

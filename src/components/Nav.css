@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 48px;
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__wordmark {
+  font-family: var(--pj-font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+}
+
+.nav__links {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  color: var(--pj-ink-muted);
+}
+
+.nav__links a {
+  text-decoration: none;
+}
