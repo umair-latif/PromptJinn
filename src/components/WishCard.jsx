@@ -1,4 +1,4 @@
-import WispMascot from './WispMascot.jsx';
+import LampMark from './LampMark.jsx';
 import './WishCard.css';
 
 /**
@@ -39,7 +39,7 @@ export default function WishCard() {
       </div>
 
       <div className="wish-card__success">
-        <WispMascot pose="success" size={44} />
+        <LampMark pose="success" size={44} />
         <div>
           <div className="wish-card__success-title">Wish granted!</div>
           <div className="wish-card__success-body">

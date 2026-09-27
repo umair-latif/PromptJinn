@@ -1,0 +1,36 @@
+/**
+ * LampMark's "thinking" animation: each constellation node shrinks and
+ * fades, then grows back — staggered per-node (see the `delay` values in
+ * LampMark.jsx) so the pulse ripples across the four nodes rather than
+ * blinking in unison.
+ *
+ * transform-box: fill-box is what lets `scale()` shrink each circle around
+ * its own center instead of the SVG's top-left corner — without it every
+ * node would drift toward (0,0) as it scaled down.
+ */
+@keyframes pj-lamp-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.7);
+  }
+}
+
+.pj-lamp-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.pj-lamp-node--pulse {
+  animation: pj-lamp-pulse 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pj-lamp-node--pulse {
+    animation: none;
+  }
+}
