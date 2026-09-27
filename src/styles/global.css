@@ -21,6 +21,10 @@ body {
   );
   color: var(--pj-ink);
   -webkit-font-smoothing: antialiased;
+  /* Belt-and-suspenders for mobile: nothing in this layout is meant to be
+     wider than the viewport, but this guarantees a stray element can never
+     cause the whole page to scroll sideways on a phone. */
+  overflow-x: hidden;
 }
 
 a {

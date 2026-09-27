@@ -1,5 +1,7 @@
+/* Mobile-first — see the note at the top of Nav.css for the pattern. */
+
 .hero {
-  padding: 32px 48px 0;
+  padding: 24px 20px 0;
   max-width: 720px;
 }
 
@@ -16,44 +18,42 @@
 
 .hero__headline-wrap {
   position: relative;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .hero__headline {
   font-family: var(--pj-font-display);
   font-weight: 700;
-  font-size: 48px;
-  line-height: 1.12;
+  font-size: 32px;
+  line-height: 1.15;
   margin: 0;
 }
 
+/* Hidden by default (mobile): there isn't enough spare width next to the
+   headline for this decorative accent without it colliding with the text.
+   It comes back once the desktop query gives it room. */
 .hero__urdu-accent {
-  position: absolute;
-  top: -10px;
-  right: 40px;
-  font-family: var(--pj-font-urdu);
-  font-size: 46px;
-  color: var(--pj-gold);
-  opacity: 0.55;
+  display: none;
 }
 
 .hero__subhead {
   max-width: 480px;
-  margin-top: 18px;
-  font-size: 15px;
+  margin-top: 14px;
+  font-size: 14px;
   line-height: 1.65;
   color: var(--pj-ink-muted);
 }
 
 .hero__cta-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
-  margin-top: 26px;
+  gap: 14px;
+  margin-top: 22px;
 }
 
 .hero__cta-primary {
-  padding: 13px 26px;
+  padding: 12px 22px;
   background: var(--pj-gold);
   color: var(--pj-bg-start);
   font-weight: 600;
@@ -69,14 +69,43 @@
   text-underline-offset: 4px;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 641px) {
   .hero {
-    padding: 24px 20px 0;
+    padding: 32px 48px 0;
   }
+
+  .hero__headline-wrap {
+    margin-top: 22px;
+  }
+
   .hero__headline {
-    font-size: 34px;
+    font-size: 48px;
+    line-height: 1.12;
   }
+
   .hero__urdu-accent {
-    display: none;
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    font-family: var(--pj-font-urdu);
+    font-size: 46px;
+    color: var(--pj-gold);
+    opacity: 0.55;
+  }
+
+  .hero__subhead {
+    margin-top: 18px;
+    font-size: 15px;
+  }
+
+  .hero__cta-row {
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin-top: 26px;
+  }
+
+  .hero__cta-primary {
+    padding: 13px 26px;
   }
 }

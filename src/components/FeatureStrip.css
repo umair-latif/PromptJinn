@@ -1,24 +1,33 @@
+/* Mobile-first — see the note at the top of Nav.css for the pattern. */
+
 .feature-strip {
   display: flex;
-  gap: 16px;
-  margin: 26px 48px 0;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 16px 0;
   max-width: 624px;
 }
 
 .feature-strip__item {
   flex: 1;
-  padding: 16px;
+  padding: 14px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--pj-panel-border);
   border-radius: 12px;
   text-align: center;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 600;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 641px) {
   .feature-strip {
-    flex-direction: column;
-    margin: 20px 20px 0;
+    flex-direction: row;
+    gap: 16px;
+    margin: 26px 48px 0;
+  }
+
+  .feature-strip__item {
+    padding: 16px;
+    font-size: 13px;
   }
 }

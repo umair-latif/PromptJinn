@@ -10,7 +10,7 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav__brand">
-        <LampMark size={22} />
+        <LampMark size={30} />
         <span className="nav__wordmark">PromptJinn</span>
       </div>
       <div className="nav__links">

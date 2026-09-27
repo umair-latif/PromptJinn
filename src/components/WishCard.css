@@ -1,10 +1,12 @@
+/* Mobile-first — see the note at the top of Nav.css for the pattern. */
+
 .wish-card {
   position: relative;
-  margin: 34px 48px 0;
+  margin: 24px 16px 0;
   background: var(--pj-panel);
   border: 1px solid var(--pj-gold-soft);
   border-radius: var(--pj-radius-lg);
-  padding: 24px;
+  padding: 18px;
   max-width: 624px;
 }
 
@@ -17,10 +19,10 @@
 
 .wish-card__input {
   margin-top: 8px;
-  padding: 13px 16px;
+  padding: 12px 14px;
   background: var(--pj-input-bg);
   border-radius: var(--pj-radius-md);
-  font-size: 14px;
+  font-size: 13.5px;
 }
 
 .wish-card__arrow {
@@ -32,22 +34,26 @@
 .wish-card__output {
   position: relative;
   margin-top: 8px;
-  padding: 16px;
+  padding: 14px;
   background: var(--pj-gold-softer);
   border: 1px solid var(--pj-gold-soft);
   border-radius: var(--pj-radius-md);
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: 12.5px;
+  font-size: 12px;
   color: #efe6c8;
 }
 
 .wish-card__copy {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  padding: 5px 11px;
+  /* On mobile this sits in normal flow, below the three answer lines —
+     an absolutely positioned button in the corner would overlap the text
+     on a narrow phone screen. It moves back to the corner on desktop,
+     where there's room for it. */
+  position: static;
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 6px 13px;
   background: var(--pj-gold);
   color: var(--pj-bg-start);
   font-size: 11px;
@@ -59,6 +65,7 @@
 
 .wish-card__success {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 14px;
   margin-top: 20px;
@@ -78,8 +85,27 @@
   margin-top: 2px;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 641px) {
   .wish-card {
-    margin: 24px 20px 0;
+    margin: 34px 48px 0;
+    padding: 24px;
+  }
+
+  .wish-card__input {
+    padding: 13px 16px;
+    font-size: 14px;
+  }
+
+  .wish-card__output {
+    padding: 16px;
+    font-size: 12.5px;
+  }
+
+  .wish-card__copy {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    margin-top: 0;
+    padding: 5px 11px;
   }
 }
